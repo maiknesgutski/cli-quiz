@@ -51,6 +51,9 @@ async function welcome() {
     `);
 }
 
+/**
+ * Function to set the name of the player. Name Value gets set through the {inquirer.prompt()}
+ */
 async function askName() {
     const answers = await inquirer.prompt({
         name: 'player_name',
@@ -65,8 +68,9 @@ async function askName() {
 }
 
 /**
- * 
- * @param {boolean} isCorrect 
+ * This Function handles the frontend part of checking the answer.
+ * @param {boolean} isCorrect
+ * @returns {void} Prints to console. 
  */
 async function handleAnswer(isCorrect){
     const spinner = createSpinner('Checking answer ...').start();
@@ -80,6 +84,10 @@ async function handleAnswer(isCorrect){
     }
 }
 
+/**
+ * Function that checks if the user knows the favorite color of the game.
+ * @returns {void}
+ */
 async function question_1(){
     let correct = `Red ${chalk.bgRed('  ')}`;
 
