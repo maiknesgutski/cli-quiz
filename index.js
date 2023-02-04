@@ -32,7 +32,7 @@ const player = {
     }
 }
 
-//sleep function
+//sleep function used for the spinners and loaders (cosmetic)
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 async function welcome() {
